@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace OfficeFurniture.Domain.Models
 {
-    public class Discount
+    public abstract class DiscountBase
     {
+        public DiscountBase(int id, int customerId)
+        {
+            Id = id;
+            CustomerId = customerId;
+        }
+
         public int Id { get; set; }
-        public string Name { get; set; }
         public decimal Value { get; set; }
         public int CustomerId { get; set; }
     }

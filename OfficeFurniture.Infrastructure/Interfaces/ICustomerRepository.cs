@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeFurniture.Domain.Interfaces
+namespace OfficeFurniture.Infrastructure.Interfaces
 {
     public interface ICustomerRepository
     {
-        List<Discount> GetDiscountsByCustomerId(int customerId);
+        List<DiscountBase> GetDiscountsByCustomerId(int customerId);
     }
 }

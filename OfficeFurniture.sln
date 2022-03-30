@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeFurniture", "OfficeFurniture\OfficeFurniture.csproj", "{AED96914-6D10-40BB-B91C-7CE9002908F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeFurniture.UI", "OfficeFurniture\OfficeFurniture.UI.csproj", "{AED96914-6D10-40BB-B91C-7CE9002908F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{4C427845-BBA0-466E-A637-91E523A0C05D}"
 EndProject
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeFurniture.Tests", "Of
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F3564FEB-CEF5-468A-9926-19F9B2E33111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeFurniture.Domain", "OfficeFurniture.Domain\OfficeFurniture.Domain.csproj", "{A60B5A90-74BC-4340-94B3-BFE9F91F89A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeFurniture.Domain", "OfficeFurniture.Domain\OfficeFurniture.Domain.csproj", "{A60B5A90-74BC-4340-94B3-BFE9F91F89A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

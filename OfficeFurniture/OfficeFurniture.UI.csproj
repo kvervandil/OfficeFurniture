@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OfficeFurniture.Application\OfficeFurniture.Application.csproj" />
-    <ProjectReference Include="..\OfficeFurniture.Infrastructure\OfficeFurniture.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

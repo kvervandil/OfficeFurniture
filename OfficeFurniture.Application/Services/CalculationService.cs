@@ -1,6 +1,6 @@
 ﻿using OfficeFurniture.Application.Interfaces;
-using OfficeFurniture.Domain.Interfaces;
 using OfficeFurniture.Domain.Models;
+using OfficeFurniture.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +23,13 @@ namespace OfficeFurniture.Application.Services
 
         public decimal GetFinalPrice(int customerId, int productId)
         {
-            List<Discount> discounts = _customerRepository.GetDiscountsByCustomerId(customerId);
+            List<DiscountBase> discounts = _customerRepository.GetDiscountsByCustomerId(customerId);
 
-            throw new NotImplementedException();
+            Product product = _productRepository.GetProductById(productId);
+
+            var finalDiscount = discounts.Sum(x => x.Value) / 100;
+
+            return (1 - finalDiscount) * product.PriceBase; 
         }
     }
 }
