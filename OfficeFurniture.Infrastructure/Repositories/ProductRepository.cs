@@ -1,10 +1,5 @@
 ﻿using OfficeFurniture.Domain.Models;
 using OfficeFurniture.Infrastructure.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OfficeFurniture.Infrastructure.Repositories
 {
@@ -23,13 +18,18 @@ namespace OfficeFurniture.Infrastructure.Repositories
             var products = new List<Product>
             {
                 new Product(1, "Product1", 1000),
-                new Product(1, "Product1", 8000),
-                new Product(1, "Product1", 6000),
-                new Product(1, "Product1", 4000),
-                new Product(1, "Product1", 5000),
+                new Product(2, "Product2", 8000),
+                new Product(3, "Product3", 6000),
+                new Product(4, "Product4", 4000),
+                new Product(5, "Product5", 5000),
             };
 
             return products;
+        }
+
+        public List<Product> GetAll()
+        {
+            return Products;
         }
     }
 }

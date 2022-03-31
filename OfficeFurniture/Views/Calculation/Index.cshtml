@@ -1,0 +1,91 @@
+﻿@model OfficeFurniture.UI.Models.CalculationViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    Calculate
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customers</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var customer in Model.Customers) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => customer.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => customer.Name)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Products</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var product in Model.Products) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => product.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.PriceBase)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Calculate">
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label">Customer</label>
+                <select asp-for="CustomerId" class="form-select" >
+                    <option value="">Select the customer</option>
+                    @foreach (var customer in Model.Customers)
+                    {
+                        <option value=@customer.Id>@customer.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductId" class="control-label">Product</label>
+                <select asp-for="ProductId" class="form-select" >
+                    <option value="">Select the customer</option>
+                    @foreach (var product in Model.Products)
+                    {
+                        <option value=@product.Id>@product.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <p>
+            Price after discounts:
+            @Model.FinalPrice
+        </p>
+    </div>
+</div>
+
