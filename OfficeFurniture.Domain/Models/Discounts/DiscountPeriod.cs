@@ -1,4 +1,4 @@
-﻿using OfficeFurniture.Domain.enums;
+﻿using OfficeFurniture.Domain.Enums;
 
 namespace OfficeFurniture.Domain.Models
 {

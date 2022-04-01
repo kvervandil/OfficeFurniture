@@ -12,6 +12,7 @@ namespace OfficeFurniture.Application.Services
         {
             _productRepository = productRepository;
         }
+
         public List<Product> GetAll()
         {
             return _productRepository.GetAll();

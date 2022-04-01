@@ -1,4 +1,4 @@
-﻿namespace OfficeFurniture.Domain.enums
+﻿namespace OfficeFurniture.Domain.Enums
 {
     public enum Months
     {

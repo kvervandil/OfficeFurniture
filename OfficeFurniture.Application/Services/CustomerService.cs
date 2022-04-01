@@ -12,6 +12,7 @@ namespace OfficeFurniture.Application.Services
         {
             _customerRepository = customerRepository;
         }
+
         public List<Customer> GetAll()
         {
             var customers = _customerRepository.GetAllCustomers();

@@ -15,7 +15,6 @@ namespace OfficeFurniture.Application.Services
             _productRepository = productRepository;
         }
 
-
         public decimal GetFinalPrice(int customerId, int productId)
         {
             List<DiscountBase> discounts = _customerRepository.GetDiscountsByCustomerId(customerId);

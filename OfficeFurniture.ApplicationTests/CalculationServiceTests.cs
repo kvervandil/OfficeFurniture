@@ -37,7 +37,6 @@ namespace OfficeFurniture.ApplicationTests
             var actualResult = objectUnderTest.GetFinalPrice(1, 1);
 
             //Assert
-
             var expectedResult = 1080;
 
             Assert.Equal(expectedResult, actualResult);
