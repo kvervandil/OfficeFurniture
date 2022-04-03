@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OfficeFurniture.Application\OfficeFurniture.Application.csproj" />
-    <ProjectReference Include="..\OfficeFurniture.Infrastructure\OfficeFurniture.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\recru\OfficeFurniture.Application\OfficeFurniture.Application.csproj" />
+    <ProjectReference Include="..\..\..\recru\OfficeFurniture.Infrastructure\OfficeFurniture.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
